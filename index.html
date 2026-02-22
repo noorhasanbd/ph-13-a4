@@ -36,8 +36,8 @@
     <section class="status-cards container mx-auto  py-10">
         <div class="space-y-4">
             <h1 class="text-3xl text-[#002C5C] font-bold">Job Application Tracker</h1>
-            <div class="cards grid grid-cols-3 justify-items-start ">
-                    <div class="card bg-base-100 w-96 shadow-sm">
+            <div class="cards grid sm:grid-cols-1 md:grid-cols-3 justify-items-start w-full gap-4">
+                    <div class="card bg-base-100 w-full shadow-sm">
                         <div class="card-body">
                             
                             <p>Total</p>
@@ -45,7 +45,7 @@
                             
                         </div>
                     </div>
-                    <div class="card bg-base-100 w-96 shadow-sm">
+                    <div class="card bg-base-100 w-full shadow-sm">
                         <div class="card-body">
                             
                             <p>Total</p>
@@ -53,7 +53,7 @@
                             
                         </div>
                     </div>
-                    <div class="card bg-base-100 w-96 shadow-sm">
+                    <div class="card bg-base-100  w-full shadow-sm">
                         <div class="card-body">
                             
                             <p>Total</p>
@@ -67,12 +67,11 @@
     </section>
 
     <section class="available-job container mx-auto">
-        <div class="grid grid-cols-2 items-center">
-            <h3 class="text-xl text-[#002C5C] semi-bold">Available Jobs</h3>
-            <span class="text-base text-[#64748B] text-right">8 jobs</span>
-
+        <div class="flex justify-between items-center my-5">
+            <h3 class="text-xl text-[#002C5C] font-semibold">Available Jobs</h3>
+            <span class="text-base text-[#64748B]">8 jobs</span>
+        </div>
             <div class="tabs">
-
                 <div class="tabs gap-2">
                     <input type="radio" name="my_tabs_6" 
                             class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
@@ -91,7 +90,7 @@
                 </div>
 
             </div>
-        </div>
+       
     </section>
     
 </body>
