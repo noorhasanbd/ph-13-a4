@@ -1,97 +1,282 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" data-theme="light">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Tracker</title>
-    
-
 
     <!-- Tailwind + Daisy UI -->
-     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-
     <!-- Geist font -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icons -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- Applying font to all -->
     <style>
-        *{
-            font-family: "Geist", sans-serif;
-        }
+      * {
+        font-family: "Geist", sans-serif;
+      }
     </style>
-
-</head>
-<body class=" h-screen bg-base-200">
-
-    <section class="status-cards container mx-auto  py-10">
-        <div class="space-y-4">
-            <h1 class="text-3xl text-[#002C5C] font-bold">Job Application Tracker</h1>
-            <div class="cards grid sm:grid-cols-1 md:grid-cols-3 justify-items-start w-full gap-4">
-                    <div class="card bg-base-100 w-full shadow-sm">
-                        <div class="card-body">
-                            
-                            <p>Total</p>
-                            <h2 class="card-title">8</h2>
-                            
-                        </div>
-                    </div>
-                    <div class="card bg-base-100 w-full shadow-sm">
-                        <div class="card-body">
-                            
-                            <p>Total</p>
-                            <h2 class="card-title text-green-500">0</h2>
-                            
-                        </div>
-                    </div>
-                    <div class="card bg-base-100  w-full shadow-sm">
-                        <div class="card-body">
-                            
-                            <p>Total</p>
-                            <h2 class="card-title text-red-500">0</h2>
-                            
-                        </div>
-                    </div>
-                    
+  </head>
+  <body class="h-screen bg-base-200">
+    <section class="status-cards container mx-auto py-10">
+      <div class="space-y-4">
+        <h1 class="text-3xl text-[#002C5C] font-bold">
+          Job Application Tracker
+        </h1>
+        <div
+          class="cards grid sm:grid-cols-1 md:grid-cols-3 justify-items-start w-full gap-4"
+        >
+          <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+              <p>Total</p>
+              <h2 class="card-title">8</h2>
             </div>
+          </div>
+          <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+              <p>Total</p>
+              <h2 class="card-title text-green-500">0</h2>
+            </div>
+          </div>
+          <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+              <p>Total</p>
+              <h2 class="card-title text-red-500">0</h2>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="available-job container mx-auto">
-        <div class="flex justify-between items-center my-5">
-            <h3 class="text-xl text-[#002C5C] font-semibold">Available Jobs</h3>
-            <span class="text-base text-[#64748B]">8 jobs</span>
-        </div>
-            <div class="tabs">
-                <div class="tabs gap-2">
-                    <input type="radio" name="my_tabs_6" 
-                            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
-                            aria-label="All Jobs" />
-                    <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">Tab content 1</div>
+      <div class="flex justify-between items-center my-5">
+        <h3 class="text-xl text-[#002C5C] font-semibold">Available Jobs</h3>
+        <span class="text-base text-[#64748B]">8 jobs</span>
+      </div>
+      <div class="tabs">
+        <div class="tabs w-full gap-2">
+          <input
+            type="radio"
+            name="my_tabs_6"
+            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600"
+            aria-label="All Jobs"
+            checked="checked"
+          />
+          <div class="tab-content bg-base-200 p-6">
+    <div class="flex flex-col gap-6">
 
-                    <input type="radio" name="my_tabs_6" 
-                            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
-                            aria-label="Interview" checked="checked" />
-                    <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">Tab content 2</div>
-
-                    <input type="radio" name="my_tabs_6" 
-                            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
-                            aria-label="Rejected" />
-                    <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">Tab content 3</div>
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">Mobile First Corp</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">React Native Developer</p>
                 </div>
-
+                <p class="text-[14px] text-[#64748B] pb-6">Remote • Full-time • $130,000 - $175,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
             </div>
-       
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">TechStream Solutions</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">Backend Engineer</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">Austin, TX • Hybrid • $140,000 - $185,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Scale high-traffic Node.js microservices and manage PostgreSQL databases in a cloud-native environment.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">CloudScale Systems</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">DevOps Specialist</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">Remote • Full-time • $150,000 - $200,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Automate deployment pipelines and manage Kubernetes clusters to ensure 99.9% uptime for global services.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">Pixel Perfect Agency</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">UI/UX Designer</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">London, UK • Contract • $90 - $120 /hr</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Create stunning user interfaces and wireframes in Figma for international clients in the fintech sector.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">DataSight AI</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">Data Scientist</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">San Francisco, CA • On-site • $170,000 - $220,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Develop machine learning models to improve customer retention and analyze large-scale datasets.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">GrowthLab SaaS</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">Full Stack Developer</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">Remote • Full-time • $110,000 - $150,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Work across the entire stack using Next.js and Prisma to build internal tools for marketing teams.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">SecureNet IT</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">Cybersecurity Analyst</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">Washington, D.C. • On-site • $135,000 - $165,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Monitor network traffic for threats and implement security protocols for government-contracted projects.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card bg-base-100 w-full shadow-sm">
+            <div class="card-body">
+                <div class="grid grid-cols-[1fr_auto] grid-rows-2 items-center">
+                    <h3 class="font-bold">Global EduTech</h3>
+                    <div class="row-span-2 flex justify-center items-center">
+                        <a class="btn rounded-full"><i class="fa-solid fa-trash-can"></i></a>
+                    </div>
+                    <p class="text-base text-[#64748B] pb-6">QA Automation Engineer</p>
+                </div>
+                <p class="text-[14px] text-[#64748B] pb-6">Remote • Part-time • $60,000 - $80,000</p>
+                <div class="badge badge-soft badge-primary p-4 mb-2">Not Applied</div>
+                <p class="text-[14px] text-[#64748B] pb-6">
+                    Design and execute automated test scripts using Selenium and Cypress to ensure high-quality software delivery.
+                </p>
+                <div class="flex gap-2">
+                    <button class="btn btn-outline btn-success">Interview</button>
+                    <button class="btn btn-outline btn-error">Rejected</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+          <input
+            type="radio"
+            name="my_tabs_6"
+            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600"
+            aria-label="Interview"
+          />
+          <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">
+            Tab content 2
+          </div>
+
+          <input
+            type="radio"
+            name="my_tabs_6"
+            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600"
+            aria-label="Rejected"
+          />
+          <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">
+            Tab content 3
+          </div>
+        </div>
+      </div>
     </section>
-    
-</body>
+  </body>
 </html>
