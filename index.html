@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Tracker</title>
+    
+
+
+    <!-- Tailwind + Daisy UI -->
+     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+
+    <!-- Geist font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    
+
+    <!-- Icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- Applying font to all -->
+    <style>
+        *{
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
+</head>
+<body class=" h-screen bg-base-200">
+
+    <section class="status-cards container mx-auto  py-10">
+        <div class="space-y-4">
+            <h1 class="text-3xl text-[#002C5C] font-bold">Job Application Tracker</h1>
+            <div class="cards grid grid-cols-3 justify-items-start ">
+                    <div class="card bg-base-100 w-96 shadow-sm">
+                        <div class="card-body">
+                            
+                            <p>Total</p>
+                            <h2 class="card-title">8</h2>
+                            
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-96 shadow-sm">
+                        <div class="card-body">
+                            
+                            <p>Total</p>
+                            <h2 class="card-title text-green-500">0</h2>
+                            
+                        </div>
+                    </div>
+                    <div class="card bg-base-100 w-96 shadow-sm">
+                        <div class="card-body">
+                            
+                            <p>Total</p>
+                            <h2 class="card-title text-red-500">0</h2>
+                            
+                        </div>
+                    </div>
+                    
+            </div>
+        </div>
+    </section>
+
+    <section class="available-job container mx-auto">
+        <div class="grid grid-cols-2 items-center">
+            <h3 class="text-xl text-[#002C5C] semi-bold">Available Jobs</h3>
+            <span class="text-base text-[#64748B] text-right">8 jobs</span>
+
+            <div class="tabs">
+
+                <div class="tabs gap-2">
+                    <input type="radio" name="my_tabs_6" 
+                            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
+                            aria-label="All Jobs" />
+                    <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">Tab content 1</div>
+
+                    <input type="radio" name="my_tabs_6" 
+                            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
+                            aria-label="Interview" checked="checked" />
+                    <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">Tab content 2</div>
+
+                    <input type="radio" name="my_tabs_6" 
+                            class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600" 
+                            aria-label="Rejected" />
+                    <div class="tab-content bg-base-100 border-base-300 p-6 mt-4">Tab content 3</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
