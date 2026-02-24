@@ -1,9 +1,9 @@
-// 1. SElect interveiw buttons
-const interviewButtons = document.querySelectorAll('.btn-success');
-const interviewList = document.getElementById('interview-list');
+// 1. Select rejected buttons
+const rejectedButtons = document.querySelectorAll('.btn-error');
+const rejectedList = document.getElementById('rejected-list');
 
 // 2. As have mutliple cards we use loop to run addEventListener
-interviewButtons.forEach(function(button) {
+rejectedButtons.forEach(function(button) {
 
     
     button.addEventListener('click', function() {
@@ -11,29 +11,42 @@ interviewButtons.forEach(function(button) {
         // 3. When we click the button we take the full card using closest
         const jobCard = button.closest('.card');
 
-        // 4. We update the status badge by selecting that badge and put interview
+        // 4. We update the status badge by selecting that badge and put rejected
         const badge = jobCard.querySelector('.badge');
         if (badge) {
-            badge.innerText = 'Interview';
-            badge.classList.replace('badge-primary', 'badge-success');
+            badge.innerText = 'Rejected';
+            badge.classList.remove('badge-primary', 'badge-success', 'badge-error');
+            badge.classList.add('badge-error');
         }
-        //5. Update the tracker cards -> Take Elements of Applied job
-        const appliedElement= document.getElementById('appliednum');
-        /// 5.2 select text
-        const appliedNum= appliedElement.innerText;
-        //5.3 convert text into number and add 1 
-        const newInterviewNum= Number(appliedNum)+1;
-        /// 5.4 update the cards number
-        appliedElement.innerText=newInterviewNum;
+       const currentParent = jobCard.parentElement.id;
+        // 5.1 Check if card is coming from outside the reject List
+        if (currentParent !== "rejected-list") {
+        // 5.2 select reject text
+        const rejectedElement = document.getElementById("rejectednum");
+        const rejectedNum = rejectedElement.innerText;
+        if(currentParent==='interview-list'){
+            const interviewElement = document.getElementById("appliednum");
+            const interviewNum = interviewElement.innerText;
 
-        // 6. Update empty interview tab message as we have data now
-        const emptyMsg = document.getElementById('interview-empty-msg');
+            // convert text into number and decrement 1 as the item is moved from interview
+            const newInterviewNum = Number(interviewNum) - 1;
+            interviewElement.innerText = newInterviewNum;
+        }
+        // 5.3 convert text into number and add 1 to increase rejected number
+        const newRejectedNum = Number(rejectedNum) + 1;
+
+        // 5.4 update the cards number
+        rejectedElement.innerText = newRejectedNum;
+        }
+
+        // 6. Update empty rejected tab message as we have data now
+        const emptyMsg = document.getElementById('rejected-empty-msg');
         if (emptyMsg) {
             emptyMsg.remove();
         }
 
         // 7. Move the card
-        interviewList.appendChild(jobCard);
+        rejectedList.appendChild(jobCard);
         
         console.log("This specific button moved its card!");
     });

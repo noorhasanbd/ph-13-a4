@@ -52,7 +52,7 @@
       <section class="available-job pb-20">
         <div class="flex justify-between items-center my-5">
           <h3 class="text-xl text-[#002C5C] font-semibold">Available Jobs</h3>
-          <span class="text-base text-[#64748B]">8 jobs</span>
+          <span class="text-base text-[#64748B]" id="all-job-number">8 jobs</span>
         </div>
 
         <div class="tabs w-full">
@@ -79,7 +79,7 @@
                   </p>
                   <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                   </div>
                 </div>
               </div>
@@ -103,7 +103,7 @@
                   </p>
                   <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@
                     </p>
                     <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                     </div>
                 </div>
                 </div>
@@ -149,7 +149,7 @@
                     </p>
                     <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                     </div>
                 </div>
                 </div>
@@ -172,7 +172,7 @@
                     </p>
                     <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                     </div>
                 </div>
                 </div>
@@ -195,7 +195,7 @@
                     </p>
                     <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                     </div>
                 </div>
                 </div>
@@ -218,7 +218,7 @@
                     </p>
                     <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                     </div>
                 </div>
                 </div>
@@ -241,7 +241,7 @@
                     </p>
                     <div class="flex gap-2">
                     <button class="btn btn-outline btn-success btn-sm">Interview</button>
-                    <button class="btn btn-outline btn-error btn-sm">Rejected</button>
+                    <button class="btn btn-outline btn-error btn-sm btn-rejected">Rejected</button>
                     </div>
                 </div>
                 </div>
@@ -255,13 +255,15 @@
           </div>
 
           <input type="radio" name="my_tabs_6" class="tab rounded-md border border-gray-200 text-gray-500 checked:!bg-blue-600 checked:!text-white checked:!border-blue-600 ml-2" aria-label="Rejected" />
-          <div class="tab-content bg-base-200 pt-6">
-             <p class="text-center py-10 text-gray-400">No rejections yet. Keep applying!</p>
+          <div class="tab-content bg-base-200 pt-6" id="rejected-list">
+             <p class="text-center py-10 text-gray-400" id="rejected-empty-msg">No rejections yet. Keep applying!</p>
           </div>
         </div>
       </section>
     </div>
 
     <script src="./script/interview.js"></script>
+    <script src="./script/rejected.js"></script>
+    <script src="./script/deleted.js"></script>
   </body>
 </html>
